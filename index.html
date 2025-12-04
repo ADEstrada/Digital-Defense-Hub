@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Digital Defense - Home</title>
+    <meta name="description" content="Secure your online life with Digital Defense. Find the latest guides, tips, and essential tools to protect your data, privacy, and devices from cyber threats.">
+
+</head>
+
+<body>
+    <header>
+
+        <div class="logo">
+            <img src="shield.svg" alt="Digital Defense Logo" class="logo-icon">
+            DIGITAL DEFENSE
+        </div>
+
+        <nav class ="nav-pages">
+            <a href="index.html" class="active">Home</a>
+            <a href="tips_guides.html">Tips & Guides</a>
+            <a href="security_check.html">Security Check</a>
+        </nav>
+
+        <div id="current-datetime" class="header-datetime"></div>
+
+    </header>
+
+    <main class="home-section">
+
+        <section class="description-content">
+
+            <h4 class="subject-title">IT 105 Project</h4>
+            <h1 class="main-title">Your Digital Defense Starts Here.</h1>
+            <p class ="content-description"> A secure online life isn't complicated. We provide simple, actionable steps to protect
+                your data, privacy, and finances from digital threats.</p>
+            <a href="tips_guides.html" class="Essential-Tips-Button">See Essential Tips</a>
+
+        </section>
+
+        <section class="habit-content">
+
+            <h2 class="habit-title">The Top 3 Habits for Digital Safety</h2>
+            <div class="features-grid">
+
+                <div class="feature-card" data-accent="blue">
+                    <div class="card-icon-wrapper">
+                        <img src="lock.svg" alt="Lock Icon" class="lock-icon">
+                    </div>
+                        <h3>1. Master Your Passwords</h3>
+                        <p>Never reuse passwords. Use a password manager and enable Multi-Factor Authentication (MFA) on all critical accounts.</p>
+                </div>
+
+                <div class="feature-card" data-accent="yellow">
+                    <div class="card-icon-wrapper">
+                        <img src="protect.svg" alt="Shield Icon" class="protect-icon">
+                    </div>
+                        <h3>2. Recognize Phishing</h3>
+                        <p>Always check the sender's email address and hover over links before clicking. Legitimate companies rarely ask for passwords via email.</p>
+                </div>
+
+                <div class="feature-card" data-accent="green">
+                    <div class="card-icon-wrapper">
+                        <img src="download.svg" alt="Download Icon" class="download-icon">
+                    </div>
+                    <h3>3. Keep Software Updated</h3>
+                    <p>Updates fix security flaws. Ensure your operating system, browser, and all applications are running the latest versions immediately.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="threat-landscape">
+
+                <h2 class="threat-landscape-title">The Digital Threat Landscape is Real.</h2>
+                <p class="threat-landscape-subtitle">Don't be a statistic. A simple check can prevent 90% of common attacks.</p>
+
+                <div class="stats-grid">
+
+                    <div class="stat-item">
+                        <span class="stat-number" data-color="dark-red">85%</span>
+                        <span class="stat-label">of breaches involve a human element (e.g., clicking a bad link).</span>
+                    </div>
+
+                    <div class="stat-item">
+                        <span class="stat-number" data-color="bright-blue">74%</span>
+                        <span class="stat-label">of users use the same password across multiple websites.</span>
+                    </div>
+
+                    <div class="stat-item">
+                        <span class="stat-number" data-color="green">9 out of 10</span>
+                        <span class="stat-label">attacks can be stopped by just applying critical software patches.</span>
+                    </div>
+
+                </div>
+
+                <a href="security_check.html" class="Security-Check-Button">Check Your Security Now &rarr;</a>
+
+        </section>
+
+        <section class="visual-break-section">
+
+            <h2 class="visual-break-title">Ready to Protect What Matters?</h2>
+            <img src="digitalsecurity.svg" alt="Digital security graphic" class="digital-security-image">
+            <p class="visual-break-description">Secure your accounts today with the right knowledge. Browse our guides or run a quick check!</p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p class="footer-1">Created for CNSC IT 105 Application Development and Emerging Technologies.</p>
+        <p class="footer-2">&copy; 2025 Digital Defense Hub. All Rights Reserved.</p>
+
+    </footer>
+
+    <script>
+
+        // DATE AND TIME DISPLAY
+
+        function updateDateTime() {
+            const now = new Date();
+            const optionsDate = { weekday: 'short', month: 'short', day: 'numeric' };
+            const optionsTime = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+
+            const datePart = now.toLocaleDateString('en-US', optionsDate);
+            const timePart = now.toLocaleTimeString('en-US', optionsTime);
+
+            const datetimeElement = document.getElementById('current-datetime');
+            if (datetimeElement) {
+                datetimeElement.innerHTML = `${datePart} | ${timePart}`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        });
+
+    </script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Digital Defense - Tips</title>
+    <meta name="description" content="Access essential guides and detailed steps to fortify your digital security, including password strategies, phishing detection, and software update importance.">
+
+</head>
+
+<body>
+    <header>
+
+        <div class="logo">
+            <img src="shield.svg" alt="Digital Defense Logo" class="logo-icon">
+            DIGITAL DEFENSE
+        </div>
+
+        <nav class ="nav-pages">
+            <a href="index.html">Home</a>
+            <a href="tips_guides.html" class="active">Tips & Guides</a>
+            <a href="security_check.html">Security Check</a>
+        </nav>
+
+        <div id="current-datetime" class="header-datetime"></div>
+
+    </header>
+
+    <main class="tips-section">
+
+        <section class="tips-description">
+            <h1 class="tip-title">Essential Cybersecurity Guides</h1>
+            <p class ="content-description">Detailed steps to secure your online presence and devices.</p>
+        </section>
+
+        <section id="guide1-content">
+
+            <h2 class="guide-title">Guide 1: Fortifying your Digital Gates</h2>
+            <p class="guide-list-description">Your first line of defense is your password. Follow these steps to maximize your protection againsts account takeovers.</p>
+
+            <div class="guide-list-container">
+                <ol class="guide-list">
+                    <li>
+                        <strong>Length Over Complexity:</strong> Aim for passwords of 12 characters or more. Long passphrases (e.g., "CorrectHorseBatteryStaple") are easier to remember and harder to crack than complex short ones.
+                    </li>
+
+                    <li>
+                        <strong>Use a Password Manager:</strong> Tools like lastpass or bitwarden generate complex, unique passwords for every site and store them securely. You only need to remember one master password.
+                    </li>
+
+                    <li>
+                        <strong>Enable Two-Factor Authentication (2FA/MFA):</strong> This is non-negotiable. Even if your password is stolen, the attacker cannot log in without temporary code sent to your phone.
+                    </li>
+
+                    <li>
+                        <strong>Never Reuse:</strong> A single data breach could compromise all your accounts if you use the same password everywhere. Ensure every service has a unique password.
+                    </li>
+                </ol>
+            </div>
+
+        </section>
+
+        <section class="threats-content">
+
+            <div class="features-grid">
+
+                <div class="threats-card" data-accent="blue">
+                    <h2 class="threats-title">Key Threats to Watch For</h2>
+
+                    <div class="threats-list-container">
+                        <ul class="threats-list">
+                            <li>
+                                <strong>Phishing:</strong> Fake emails or sites trying to steal credentials.
+                            </li>
+
+                            <li>
+                                <strong>Malware:</strong> Software designed to damage or gain unauthorized access to your system.
+                            </li>
+
+                            <li>
+                                <strong>Ransomware:</strong> Encrypt your files, demanding a fee for their release.
+                            </li>
+
+                            <li>
+                                <strong>Shoulder Surfing:</strong> Simple Theft by watching you enter sensitive data.
+                            </li>
+
+                            <li>
+                                <strong>DDoS Attacks:</strong> Systems of botnets designed to flood or crash a network.
+                            </li>
+
+                            <li>
+                                <strong>Advanced Persistent Threats:</strong> Prolonged cyberattack used to steal valuabe data while undetected.
+                            </li>
+
+                            <li>
+                                <strong>IoT Based Attacks:</strong> Cyberattacks that gain unauthorized access to sensitive data through any IoT Device.
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="guide2-content">
+
+            <h2 class="guide-title">Guide 2: Spotting a Scam (Phishing & Email) </h2>
+            <p class="guide-list-description">Email remains the number one attack vector. Learn to recognize the tell-tale signs of a malicious phishing attempt to protect your data and privacy.</p>
+
+            <div class="guide-list-container">
+                <ol class="guide-list">
+                    <li>
+                        <strong>Check the Sender's Email Address:</strong> Attackers often use addresses that are close but not quite right (e.g., `micros0ft.com` instead of `microsoft.com`). Always look at the full sender details.
+                    </li>
+
+                    <li>
+                        <strong>Beware of Urgency or Threat:</strong> Phishing emails often use high-pressure language ("Your account will be suspended in 2 hours!" or "Immediate action required!") to make you click before you think.
+                    </li>
+
+                    <li>
+                        <strong>Hover Over Links:</strong> Before clicking any link, hover your mouse over it (or long-press on mobile) to see the true destination URL in the corner of your browser. If it doesn't match the company's domain, delete the email.
+                    </li>
+
+                    <li>
+                        <strong>Verify Requests Separately:</strong> If you receive an email from your bank or a service asking you to log in or update details, do not use the link in the email. Instead, open a new browser tab and manually navigate to the company's official website.
+                    </li>
+
+                    <li>
+                        <strong>Examine Attachments:</strong> Never open attachments that end in suspicious extensions like `.exe`, `.zip`, or `.js` unless you are absolutely sure of the source and were expecting the file.
+                    </li>
+                </ol>
+            </div>
+
+        </section>
+
+        <section class="security-content">
+
+            <div class="features-grid">
+
+                <div class="security-card" data-accent="green">
+                    <h2 class="security-title">Securing Your Connection (VPN & Public Wi-Fi)</h2>
+
+                    <div class="security-list-container">
+                        <ul class="security-list">
+                            <li>
+                                <strong>Use a Virtual Private Network (VPN):</strong> A VPN encrypts your entire connection, making it unreadable to anyone monitoring the Wi-Fi network you are connected to. [Image of encrypted internet traffic using a VPN]
+                            </li>
+                            <li>
+                                <strong>Assume Public Wi-Fi is Insecure:</strong> Never conduct sensitive activities (banking, shopping, primary email) on free public Wi-Fi without first enabling a VPN.
+                            </li>
+                            <li>
+                                <strong>Disable Automatic Wi-Fi:</strong> Prevent your device from automatically joining malicious, identically named "rogue" networks.
+                            </li>
+                            <li>
+                                <strong>Check for HTTPS:</strong> Always look for the padlock icon in the browser address bar and ensure the URL begins with `https://` for encrypted site communication.
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="guide3-content">
+
+            <h2 class="guide-title">Guide 3: The Power of Patches (Software Updates & Devices)</h2>
+            <p class="guide-list-description">Keeping your software and operating systems current is one of the most effective ways to close security gaps that attackers exploit.</p>
+
+            <div class="guide-list-container">
+                <ol class="guide-list">
+                    <li>
+                        <strong>Automate Operating System Updates:</strong> Enable automatic updates for Windows, macOS, Android, and iOS. Most patches fix critical vulnerabilities immediately upon release.
+                    </li>
+
+                    <li>
+                        <strong>Update Your Browser Immediately:</strong> Your web browser (Chrome, Firefox, Edge, Safari) is your main gateway to the internet. Always update it when prompted to ensure you have the latest security features.
+                    </li>
+
+                    <li>
+                        <strong>Review Application Permissions:</strong> Regularly check which permissions your mobile apps and desktop software have. Uninstall apps you no longer use, as they are unmaintained potential security risks.
+                    </li>
+
+                    <li>
+                        <strong>Do Not Ignore Notifications:</strong> When a device, app, or service prompts you to update, do it as soon as is practical. Delaying updates leaves you exposed to known threats.
+                    </li>
+                </ol>
+            </div>
+
+        </section>
+
+        <section class="security-check-card">
+
+            <div class="security-check-inner">
+
+                <h3 class="security-check-title">Take the Next Step to Digital Safety</h3>
+                <p class="security-check-subtitle">Want to see how your habits measure up against real-world threats? Run our instant security assessment!</p>
+                <a href="security_check.html" class="security-check-button">Start Your Security Check &rarr;</a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p class="footer-1">Created for CNSC IT 105 Application Development and Emerging Technologies.</p>
+        <p class="footer-2">&copy; 2025 Digital Defense Hub. All Rights Reserved.</p>
+
+    </footer>
+
+    <script>
+
+        // DATE AND TIME DISPLAY
+
+        function updateDateTime() {
+            const now = new Date();
+            const optionsDate = { weekday: 'short', month: 'short', day: 'numeric' };
+            const optionsTime = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+
+            const datePart = now.toLocaleDateString('en-US', optionsDate);
+            const timePart = now.toLocaleTimeString('en-US', optionsTime);
+
+            const datetimeElement = document.getElementById('current-datetime');
+            if (datetimeElement) {
+                datetimeElement.innerHTML = `${datePart} | ${timePart}`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        });
+
+    </script>
+
+</body>
+
+</html>
