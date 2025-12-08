@@ -218,31 +218,7 @@
 
     </footer>
 
-    <script>
-
-        // DATE AND TIME DISPLAY
-
-        function updateDateTime() {
-            const now = new Date();
-            const optionsDate = { weekday: 'short', month: 'short', day: 'numeric' };
-            const optionsTime = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
-
-            const datePart = now.toLocaleDateString('en-US', optionsDate);
-            const timePart = now.toLocaleTimeString('en-US', optionsTime);
-
-            const datetimeElement = document.getElementById('current-datetime');
-            if (datetimeElement) {
-                datetimeElement.innerHTML = `${datePart} | ${timePart}`;
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            updateDateTime();
-            setInterval(updateDateTime, 1000);
-        });
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
-
 </html>
