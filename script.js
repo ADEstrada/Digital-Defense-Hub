@@ -142,3 +142,50 @@ function updateDateTime() {
             resultsSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
+
+// LOGIC FOR DIGITAL PILLARS
+
+function setupPillarAccordion() {
+
+const headers = document.querySelectorAll('.pillars-content .feature-card .collapse-title');
+
+headers.forEach(header => {
+    header.addEventListener('click', () => {
+        const targetId = header.getAttribute('data-target');
+        const targetList = document.getElementById(targetId);
+        const isExpanded = header.getAttribute('aria-expanded') === 'true';
+
+        // Close all other open sections
+         document.querySelectorAll('.pillars-content .feature-card .collapse-title[aria-expanded="true"]').forEach(openHeader => {
+            if (openHeader !== header) {
+                openHeader.setAttribute('aria-expanded', 'false');
+                const openTargetId = openHeader.getAttribute('data-target');
+                document.getElementById(openTargetId).style.maxHeight = '0';
+            }
+         });
+
+         // Toggle the clicked section
+         if (!isExpanded) {
+            header.setAttribute('aria-expanded', 'true');
+                setTimeout(() => {
+                    if (targetList.scrollHeight > 0) {
+                        targetList.style.maxHeight = targetList.scrollHeight + 'px';
+                    } else {
+                        targetList.style.maxHeight = 'auto'; // Fallback if scrollHeight is 0
+                    }
+                }, 0);
+
+                    } else {
+                    // Collapse
+                        targetList.style.maxHeight = '0';
+                        header.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+         }
+
+         // Initialize all scripts on load
+         window.onload = function() {
+            updateDateTime(); // Initial date/time call
+            setupPillarAccordion(); // Initialize the accordion functionality
+         };
